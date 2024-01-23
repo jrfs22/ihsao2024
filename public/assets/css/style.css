@@ -1,0 +1,1221 @@
+:root {
+    --primary-color: #9163ed;
+    --soft-primary-color: #d7c9ea;
+    --soft-primary-button-color: #a287d7;
+    --warning-color: #ff593c;
+    --dark-color: #202132;
+    --soft-dark: #3f4161;
+    --light-color: #ffff;
+    --text-poppins: "Poppins", sans-serif;
+    --soft-gray: #909090;
+    --dark-purple: #513b89;
+    --soft-purple: #d7c9ea;
+    --blue-black: #1f0a47;
+}
+/* Toggler */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    box-shadow: none;
+}
+
+/* Body Homepage */
+body {
+    background-color: var(--soft-primary-color);
+    padding: 0;
+    margin: 0;
+}
+
+.glass-effect {
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar */
+.navbar-brand.logo {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    gap: 10px;
+}
+
+.navbar-brand.logo span {
+    width: 1px;
+    height: 40px;
+    background-color: var(--soft-primary-button-color);
+}
+
+.navbar .bg-light {
+    background-color: var(--light-color);
+}
+
+nav.navbar {
+    height: 90px;
+    font-family: var(--text-poppins);
+    font-size: 16px;
+}
+
+nav .navbar-nav li a {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: var(--soft-dark) !important;
+}
+
+nav .navbar-nav li a.active {
+    color: var(--soft-primary-button-color) !important;
+}
+
+nav .button .btn {
+    border-radius: 10px;
+    width: 80px;
+    height: 40px;
+}
+
+nav .button .btn-info {
+    color: var(--light-color);
+    background-color: var(--soft-primary-button-color);
+    border: 1px var(--soft-primary-button-color);
+}
+nav .button .btn-info:focus,
+nav .button .btn-info:active {
+    box-shadow: 0 0 0 0.2rem var(--soft-primary-button-color);
+}
+
+nav .button .btn-outline-info {
+    color: var(--soft-primary-button-color);
+    background-color: white;
+    border: 2px solid var(--soft-primary-button-color);
+}
+
+nav .button .btn-outline-info:hover {
+    color: var(--light-color);
+    background-color: var(--soft-primary-button-color);
+    border-color: var(--soft-primary-button-color);
+}
+
+nav .button .btn-outline-info:active,
+nav .button .btn-outline-info:focus {
+    box-shadow: 0 0 0 0.2rem var(--soft-primary-button-color);
+}
+
+/* btn dark */
+.btn-dark {
+    color: var(--light-color);
+    background-color: var(--blue-black);
+    border: 1px var(--blue-black);
+    border-radius: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    font-family: var(--text-poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.btn-dark:focus,
+.btn-dark:active {
+    box-shadow: 0 0 0 0.2rem var(--blue-black);
+}
+
+.btn-outline-dark {
+    color: var(--blue-black);
+    background-color: white;
+    border: 2px solid var(--blue-black);
+}
+
+.btn-outline-dark:hover {
+    color: var(--light-color);
+    background-color: var(--blue-black);
+    border-color: var(--blue-black);
+}
+
+.btn-outline-dark:active,
+.btn-outline-dark:focus {
+    box-shadow: 0 0 0 0.2rem var(--blue-black);
+}
+
+/* Animasi */
+.box-animation {
+    position: absolute;
+    top: 110px;
+    left: 40%;
+    width: 109px;
+    height: 109px;
+}
+
+.circle-animation {
+    position: absolute;
+    left: 6px;
+    top: 500px;
+}
+
+@keyframes rotateAnimation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.object-animation {
+    display: inline-block;
+    animation: rotateAnimation 5s linear infinite;
+    z-index: 1;
+}
+
+/* Jumbotron */
+.homepage .jumbotron {
+    height: 650px;
+    padding-bottom: 204px;
+    font-family: var(--text-poppins);
+    background-image: url("/assets/img/shape/home-1.png");
+    background-size: 100dvw 100%;
+}
+
+.homepage .jumbotron .container {
+    margin-top: 77px;
+}
+
+.homepage .jumbotron .logo-himaksi img {
+    width: 116px;
+    height: 53px;
+}
+
+.homepage .jumbotron .logo-himaksi span {
+    color: var(--soft-dark);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    margin-left: 10px;
+    line-height: normal;
+}
+
+.homepage .jumbotron .title {
+    margin-top: 10px;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #9163ed 0%, #1f0a47 30%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.homepage .jumbotron .subtitle {
+    color: var(--warning-color);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.homepage .jumbotron .deskripsi {
+    color: var(--dark-color);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.homepage .jumbotron .btn {
+    width: 182px;
+    display: flex;
+    height: 40px;
+    padding: 0px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--light-color);
+    border-radius: 10px;
+    position: relative;
+    z-index: 3;
+}
+
+.homepage .jumbotron .btn-info {
+    color: var(--light-color);
+    background-color: #826ab1;
+    border: 1px #826ab1;
+}
+
+.homepage .jumbotron .btn-info:active {
+    box-shadow: 0 0 0 0.2rem var(--soft-primary-button-color);
+}
+/* Lomba */
+.lomba {
+    background-image: url("/assets/img/shape/home-2.png");
+    background-repeat: no-repeat;
+    background-size: 100dvw 100%;
+    height: 969px;
+    position: relative;
+    top: -5px;
+}
+
+.homepage .lomba {
+    font-family: var(--text-poppins);
+}
+
+.homepage .lomba .header h5 {
+    color: #d7c9ea;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.homepage .lomba .header h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #9163ed 0%, #d7c9ea 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.homepage .lomba .body {
+    margin-top: 30px;
+}
+
+.homepage .lomba .body .row .col-xxl-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Timeline */
+.homepage .section-timeline {
+    background-image: url("/assets/img/shape/home-3.png");
+    font-family: var(--text-poppins);
+    margin-top: 93px;
+    background-repeat: no-repeat;
+    background-size: 100dvw;
+    background-position-y: 20%;
+}
+
+.homepage .section-timeline .header h5 {
+    color: #202132;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.homepage .section-timeline .header h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #9163ed 0%, #121327 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.homepage .section-timeline .body {
+    margin-top: 20px;
+}
+
+.timeline {
+    border-left: 21px solid #1f0a47;
+    position: relative;
+    list-style: none;
+}
+
+.timeline .timeline-item {
+    position: relative;
+}
+
+.timeline .timeline-item:after {
+    position: absolute;
+    display: block;
+    top: -5px;
+}
+
+.timeline .timeline-item:after {
+    background-color: #9163ed;
+    left: -72.5px;
+    border-radius: 50%;
+    height: 59px;
+    width: 59px;
+    content: "";
+    border: 16px solid #1f0a47;
+}
+
+/* Gallery */
+.homepage .gallery {
+    font-family: var(--text-poppins);
+    margin-top: 118px;
+    background-image: url("/assets/img/shape/home-4.png");
+    background-repeat: no-repeat;
+    background-size: 100dvw;
+    padding-bottom: 238px;
+    background-position-y: 100%;
+}
+
+.homepage .gallery .header h5 {
+    color: #202132;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.homepage .gallery .header h1 {
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(90deg, #9163ed 0%, #121327 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.homepage .gallery .body {
+    margin-top: 10px;
+}
+
+.homepage .gallery .body .row .col-xxl-4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepage footer {
+    background-color: var(--light-color);
+    padding: 49px;
+    font-family: "Roboto", sans-serif;
+}
+
+.homepage footer h3 {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* Card Lomba */
+.card {
+    width: 22.0625rem;
+    height: 345px;
+    border-radius: 10px;
+    background: #e4daf1;
+    font-family: var(--text-poppins);
+    box-shadow: 9px 10px 17.6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card .card-body {
+    display: flex;
+    padding: 20px 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    text-align: center;
+}
+
+.card .card-body h5 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    background: linear-gradient(90deg, #9163ed 0%, #1f0a47 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    align-self: stretch;
+}
+
+.card .card-body p {
+    color: #1e1e1e;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.card-lomba {
+    transition: transform 0.5s;
+}
+
+.card-lomba .card-body {
+    overflow: hidden;
+}
+
+.card-lomba:hover .front,
+.card-lomba:hover .back {
+    transition: display 30s;
+}
+
+.card-lomba .card-body.back .inner .btn {
+    border-radius: 10px;
+}
+
+.card-lomba .card-body.back .inner .btn-info {
+    color: var(--light-color);
+    background-color: var(--soft-primary-button-color);
+    border: 1px var(--soft-primary-button-color);
+}
+.card-lomba .card-body.back .inner .btn-info:focus,
+.card-lomba .card-body.back .inner .btn-info:active {
+    box-shadow: 0 0 0 0.2rem var(--soft-primary-button-color);
+}
+
+.card-lomba .card-body.back {
+    display: none;
+}
+
+.card-lomba .card-body.back .inner {
+    display: none;
+}
+
+.card-lomba:hover .card-body.front {
+    display: none;
+}
+
+.card-lomba:hover .card-body.back {
+    display: inherit;
+}
+.card-lomba:hover .card-body.back .inner {
+    display: block;
+}
+
+/* Card Timeline */
+.card-timeline {
+    width: 515px;
+    display: flex;
+    padding: 20px 30px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #e4daf1;
+    box-shadow: 9px 10px 17.6px 0px rgba(0, 0, 0, 0.4);
+    font-family: var(--text-poppins);
+    margin-left: 109px;
+}
+
+.card-timeline h5 {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    background: linear-gradient(90deg, #1f0a47 0%, #9163ed 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-timeline span {
+    color: #282828;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+}
+/* Card gallery */
+.card-gallery {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.card-gallery .content {
+    width: 100%;
+    height: 100%;
+}
+
+.card-gallery .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-gallery .content h3 {
+    color: #1f0a47;
+    text-align: center;
+    font-family: var(--text-poppins);
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    display: none;
+}
+
+.card-gallery .content:hover {
+    border-radius: 10px;
+    background: linear-gradient(
+        180deg,
+        rgba(228, 218, 241, 0) 0%,
+        #e4daf1 100%
+    );
+    box-shadow: 9px 10px 17.6px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card-gallery .content:hover h3 {
+    transition: all 0.2s;
+    display: inline;
+}
+
+/* Login */
+body.login {
+    overflow: hidden;
+}
+
+.homepage.auth .jumbotron {
+    height: 100dvh;
+    width: 100dvw;
+    background-image: url("/assets/img/shape/shape-login.png");
+    background-size: 100dvw 100%;
+    background-repeat: no-repeat;
+}
+
+.homepage.auth .jumbotron .container .row {
+    margin-top: 150px;
+}
+
+.homepage.auth h1.login {
+    color: #fff;
+    font-family: var(--text-poppins);
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.homepage.auth .box-animation img {
+    margin-left: 125px;
+}
+
+.homepage.auth .circle-animation img {
+    position: relative;
+    left: 94dvw;
+    top: -45dvh;
+}
+
+.login-form form {
+    padding: 20px;
+    border-radius: 40px;
+    background-color: var(--soft-purple);
+    margin-top: 24px;
+}
+
+.login-form form label {
+    color: #000;
+    font-family: var(--text-poppins);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.login-form form input {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+}
+
+.login-form form input::placeholder {
+    color: var(--soft-gray);
+    font-family: var(--text-poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-form form button {
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: var(--text-poppins);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 20px;
+    background-color: var(--dark-purple);
+    border: none;
+}
+
+body.online-test {
+    overflow: hidden;
+}
+
+.online-test nav {
+    height: inherit;
+    overflow: hidden;
+    display: fixed;
+    background-color: #8159d3;
+}
+
+.online-test nav a {
+    color: #000;
+    text-align: center;
+    font-family: var(--text-poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.online-test .layouting {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.online-test .layouting main {
+    flex: 1;
+    padding: 20px;
+    height: 100dvh;
+    padding-bottom: 150px;
+    overflow-y: scroll;
+}
+
+.online-test .layouting main .container {
+    padding: 15px 20px 15px 20px;
+}
+
+.online-test .layouting main .container img{
+    width: 400px;
+    height: 200px;
+    image-rendering: auto;
+}
+
+.online-test .layouting main h3 {
+    color: #000;
+    font-family: var(--text-poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.online-test .layouting main .line {
+    width: 100%;
+    height: 1px;
+    background-color: #707070;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.online-test .layouting main p {
+    color: #000;
+    font-family: var(--text-poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+/* 
+.online-test .layouting main .jawaban .pilihan {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.online-test .layouting main .jawaban .pilihan input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.online-test .layouting main .jawaban .pilihan label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: var(--text-poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.online-test .layouting main .jawaban .pilihan label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #000;
+    border-radius: 6px;
+}
+
+.online-test .layouting main .jawaban .pilihan input:checked + label:before {
+    background-color: #000;
+    border-color: #000;
+    content: "";
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+}
+
+.online-test
+    .layouting
+    main
+    .jawaban
+    .pilihan
+    input:not(:checked)
+    + label:before {
+    content: "";
+    border-color: #000;
+} */
+
+.online-test .layouting main .clear button {
+    padding: 4px 19px;
+    border-radius: 10px;
+    background: #8159d3;
+    border: none;
+    color: #fff;
+    font-family: var(--text-poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+}
+
+.online-test .layouting aside {
+    width: 293px;
+    background-color: #cabcdd;
+    height: 100dvh;
+}
+
+.online-test .layouting aside h4 {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
+    background-color: var(--blue-black);
+    color: #fff;
+    font-family: var(--text-poppins);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.online-test .layouting aside .waktu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-family: var(--text-poppins);
+}
+
+.online-test .layouting aside .waktu .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.online-test .layouting aside .waktu .section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.online-test .layouting aside .waktu .col-1 {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.online-test .layouting aside .waktu .col-3 h2 {
+    color: #404040;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.online-test .layouting aside .waktu .col-3 p {
+    color: #595959;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.online-test .layouting aside .nav-soal {
+    font-family: var(--text-poppins);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 293px;
+}
+
+.online-test .layouting aside .nav-soal a {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    background-color: #1f0a47;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Peserta */
+.btn-success {
+    color: var(--light-color);
+    background-color: #27ae3d;
+    border: 1px #27ae3d;
+}
+
+.btn-success:hover {
+    color: var(--light-color);
+    background-color: #27ae3d;
+    border-color: #27ae3d;
+}
+
+.btn-success:focus,
+.btn-success:active {
+    box-shadow: 0 0 0 0.2rem #27ae3d;
+}
+
+.kode-akses label {
+    color: #5f5f5f;
+    font-family: var(--text-poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.kode-akses input {
+    display: flex;
+    width: 207px;
+    padding: 6px 14px;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    border: 1px solid #9b9b9b;
+    background: #fff;
+    box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+.kode-akses button {
+    color: #f1f1f1;
+    font-family: var(--text-poppins);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border-radius: 10px !important;
+    margin-top: 10px;
+}
+
+.kode-akses .countdown {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--blue-black);
+    padding: 5px 25px;
+    width: fit-content;
+    color: white;
+    text-align: center;
+    font-family: var(--text-poppins);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.btn-kode {
+    width: fit-content!important;
+}
+
+/* Prevent Cursor */
+.cursor-text {
+    cursor: text !important;
+}
+
+/* Responsive */
+
+@media (max-width: 1000px) {
+    .navbar .navbar-collapse {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@media (max-width: 767px) {
+    .homepage {
+        overflow-x: hidden;
+    }
+    .box-animation {
+        width: 59px;
+        height: 59px;
+    }
+    .box-animation img {
+        width: 59px;
+        height: 59px;
+    }
+
+    .circle-animation {
+        width: 40px;
+        height: 40px;
+        top: 400px;
+    }
+    .circle-animation img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .homepage .jumbotron {
+        height: 450px;
+    }
+
+    .homepage .jumbotron .container {
+        margin-top: 150px;
+    }
+
+    .homepage .jumbotron .logo-himaksi img {
+        width: 74px;
+        height: 33px;
+    }
+
+    .homepage .jumbotron .btn {
+        font-size: 12px;
+        height: 25px;
+        padding: 0px 10px;
+    }
+
+    .homepage .jumbotron .col-5 {
+        display: none;
+    }
+
+    .homepage .jumbotron .logo-himaksi span {
+        font-size: 12px;
+    }
+
+    .homepage .jumbotron .title {
+        font-size: 30px;
+    }
+
+    .homepage .jumbotron .subtitle {
+        font-size: 14px;
+    }
+
+    .homepage .jumbotron .deskripsi {
+        font-size: 14px;
+    }
+
+    /* Lomba */
+    .lomba {
+        height: 1700px;
+    }
+
+    .homepage .lomba .header h5 {
+        font-size: 20px;
+    }
+
+    .homepage .lomba .header h1 {
+        font-size: 30px;
+    }
+
+    .homepage .lomba .body {
+        margin-top: 10px;
+    }
+
+    /* Timeline */
+    .homepage .section-timeline .header h5 {
+        font-size: 20px;
+    }
+    .homepage .section-timeline .header h1 {
+        font-size: 30px;
+    }
+
+    .homepage .section-timeline .body {
+        margin-top: 10px;
+    }
+
+    .timeline .timeline-item:after {
+        background-color: #9163ed;
+        left: -58px;
+        border-radius: 50%;
+        height: 33px;
+        width: 33px;
+        content: "";
+        border: 10px solid #1f0a47;
+    }
+
+    /* Gallery */
+    .homepage .gallery {
+        margin-top: 38px;
+    }
+
+    .homepage .gallery .header h5 {
+        font-size: 20px;
+    }
+
+    .homepage .gallery .header h1 {
+        font-size: 30px;
+    }
+
+    /* Card Lomba */
+    .card {
+        height: 250px;
+    }
+    .card .card-body {
+        padding: 10px 15px;
+    }
+
+    .card .card-body h5 {
+        font-size: 20px;
+    }
+
+    .card .card-body p {
+        font-size: 12px;
+    }
+
+    /* Card Timeline */
+    .card-timeline {
+        width: 250px;
+        margin-left: 10px;
+    }
+
+    .card-timeline h5 {
+        font-size: 20px;
+    }
+
+    .card-timeline span {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 884px) {
+    .homepage .jumbotron {
+        height: 650px;
+        padding-bottom: 104px;
+    }
+
+    .homepage .jumbotron .container {
+        margin-top: 37px;
+    }
+
+    .homepage .jumbotron .logo-himaksi img {
+        width: 93px;
+        height: 42px;
+    }
+
+    .homepage .jumbotron .logo-himaksi span {
+        font-size: 16px;
+    }
+
+    .homepage .jumbotron .title {
+        font-size: 46px;
+    }
+
+    .homepage .jumbotron .subtitle {
+        font-size: 18px;
+    }
+
+    .homepage .jumbotron .deskripsi {
+        font-size: 16px;
+    }
+
+    /* Lomba */
+    .lomba {
+        height: 1069px;
+    }
+
+    .homepage .lomba .header h5 {
+        font-size: 30px;
+    }
+
+    .homepage .lomba .header h1 {
+        font-size: 46px;
+    }
+
+    .homepage .lomba .body {
+        margin-top: 10px;
+    }
+
+    /* Timeline */
+    .homepage .section-timeline .header h5 {
+        font-size: 30px;
+    }
+    .homepage .section-timeline .header h1 {
+        font-size: 46px;
+    }
+
+    .homepage .section-timeline .body {
+        margin-top: 10px;
+    }
+
+    /* Gallery */
+    .homepage .gallery {
+        margin-top: 38px;
+    }
+
+    .homepage .gallery .header h5 {
+        font-size: 30px;
+    }
+
+    .homepage .gallery .header h1 {
+        font-size: 46px;
+    }
+
+    /* Card Lomba */
+    .card {
+        height: 293px;
+    }
+    .card .card-body {
+        padding: 10px 15px;
+    }
+
+    .card .card-body h5 {
+        font-size: 23px;
+    }
+
+    .card .card-body p {
+        color: #1e1e1e;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    /* Card Timeline */
+    .card-timeline {
+        width: 465px;
+        margin-left: 79px;
+    }
+
+    .card-timeline h5 {
+        font-size: 24px;
+    }
+
+    .card-timeline span {
+        font-size: 20px;
+    }
+}
