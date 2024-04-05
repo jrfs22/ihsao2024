@@ -144,6 +144,23 @@
                 </div>
             </div>
         </div>
+        <div class="lomba mt-5" id="lomba">
+            <div class="container">
+                <div class="header d-flex align-items-center justify-content-center flex-column text-center">
+                    <h5>SPONSORSHIP</h5>
+                    <h1>IHSAO 2024</h1>
+                </div>
+                <div class="body d-flex justify-content-center align-items-center flex-column">
+                    <div class="body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <img src="{{ asset('assets/img/default/sponsor.jpg') }}" width="300" height="300" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="gallery" id="gallery">
             <div class="container">
                 <div class="header d-flex align-items-center justify-content-center flex-column text-center">
@@ -174,6 +191,7 @@
                 </div>
             </div>
         </div>
+        
         <footer class="footer" id="kontak">
             <div class="container-xxl container-xl container-lg container-fluid-sm container-fluid">
                 <div class="row">

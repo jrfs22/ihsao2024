@@ -127,5 +127,13 @@
             confirmButtonText: "Ok",
         });
     </script>
+@elseif (session('logout'))
+    <script>
+        Swal.fire({
+            icon: "success",
+            title: "Logout",
+            text: "Logout berhasil"
+        });
+    </script>
 
 @endif

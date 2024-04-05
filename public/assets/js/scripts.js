@@ -27,7 +27,6 @@
 //     clearButton.style.display = anyRadioButtonSelected ? "block" : "none";
 // }
 
-
 function handleSelectChange() {
     var cabangLomba = document.getElementById("cabanglomba");
     var tipesoal = document.getElementById("tipesoal");
@@ -44,7 +43,7 @@ function handleSelectChange() {
         for (var i = 0; i < pilihanInputs.length; i++) {
             pilihanInputs[i].removeAttribute("required");
         }
-        
+
         for (var i = 0; i < optionInput.length; i++) {
             optionInput[i].removeAttribute("required");
         }
@@ -91,6 +90,25 @@ function onSubmitAlert(buttonId) {
         if (result.isConfirmed) {
             // If user clicks "Ya, simpan!" button
             document.getElementById(buttonId).form.submit();
+        }
+    });
+}
+
+function confirmLogout(event) {
+    event.preventDefault();
+    
+    Swal.fire({
+        title: "Konfirmasi",
+        text: "Apakah ingin logout",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Ya, Logout!",
+        cancelButtonText: "Batal",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = event.target.href;
         }
     });
 }

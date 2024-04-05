@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('peserta', function (Blueprint $table) {
             $table->id();
             $table->string('asal_sekolah');
+            $table->string('nama_tim');
             $table->unsignedBigInteger('users_id');
             $table->unsignedBigInteger('cabang_lomba_id');
             $table->timestamps();

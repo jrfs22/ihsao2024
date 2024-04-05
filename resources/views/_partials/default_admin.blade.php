@@ -95,7 +95,7 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-dark d-flex align-items-center justify-content-center btn-logout"
-                        href="{{ route('logout') }}">
+                        href="{{ route('logout') }}" onclick="confirmLogout(event)">
                         <div class="text-dark text-center d-flex align-items-center justify-content-center">
                             <i class="material-icons opacity-10">logout</i>
                         </div>
@@ -131,7 +131,7 @@
             @yield('content')
         </div>
     </main>
-    <!--   Core JS Files   -->
+    
     <script src="{{ asset('') }}assets/js/scripts.js"></script>
     <script src="{{ asset('') }}assets/admin/js/core/popper.min.js"></script>
     <script src="{{ asset('') }}assets/admin/js/core/bootstrap.min.js"></script>
@@ -142,7 +142,7 @@
     <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
     <script src="{{ asset('') }}assets/admin/js/material-dashboard.min.js?v=3.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <x-sweetalert2/>
+    <x-sweetalert2 />
     @yield('scripts')
 </body>
 

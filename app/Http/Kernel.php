@@ -48,7 +48,8 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'checklogin' => \App\Http\Middleware\CheckLogin::class,
         'akseskode' => \App\Http\Middleware\AksesKodeMiddleware::class,
-        'onlineTest' => \App\Http\Middleware\OnlinTestMiddleware::class
+        'onlineTest' => \App\Http\Middleware\OnlinTestMiddleware::class,
+        'checkRoleAkses' => \App\Http\Middleware\CheckAksesMiddleware::class,
     ];
 
     /**

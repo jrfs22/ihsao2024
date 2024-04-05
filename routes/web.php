@@ -43,17 +43,14 @@ Route::get('/email', function () {
 })->name('email');
 
 Route::get('/', function () {
-    if (auth()->check()) {
-        return redirect()->route('login');
-    }else {
-        return view('before-login.home');
-    }
+    return view('before-login.home');
 });
 
 
 Route::post('/loginPost', [AuthController::class, 'loginPost'])->name('loginPost');
 
-Route::middleware(['checklogin', 'web'])->group(function () {
+// Route::middleware(['checklogin', 'web'])->group(function () {
+Route::middleware(['checkRoleAkses:admin'])->group(function () {
     Route::prefix('/admin')->group(function () {
         Route::get('', [DashboardController::class, 'index'])->name('dashboard');
 
@@ -62,7 +59,7 @@ Route::middleware(['checklogin', 'web'])->group(function () {
             Route::get('/insert', [AkunController::class, 'insertPeserta'])->name('admin-insert-peserta');
             Route::post('/store', [AkunController::class, 'store'])->name('admin-store-peserta');
         });
-    
+
         Route::prefix('/soal')->group(function () {
             Route::get('/', [SoalController::class, 'index'])->name('admin-soal');
             Route::post('/store', [SoalController::class, 'store'])->name('admin-store-soal');
@@ -70,28 +67,31 @@ Route::middleware(['checklogin', 'web'])->group(function () {
             Route::get('/edit/{id}', [SoalController::class, 'edit'])->name('admin-ubah-atribut');
             Route::put('/update/{id}', [SoalController::class, 'update'])->name('admin-update-atribut');
         });
-    
+
         Route::prefix('/hasil')->group(function () {
             Route::get('', [HasilController::class, 'index'])->name('admin-hasil');
             Route::get('/detail/{id}', [HasilController::class, 'detail'])->name('admin-detail-hasil');
         });
-        
+
         Route::prefix('/akun')->group(function () {
             Route::get('', [AkunController::class, 'index'])->name('admin-akun');
             Route::get('/edit', [AkunController::class, 'edit'])->name('admin-edit-akun');
             Route::put('/update', [AkunController::class, 'update'])->name('admin-update-akun');
         });
     });
-    
-    Route::prefix('/auth')->group(function () {
-        Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-    });
-    
+
+});
+
+Route::prefix('/auth')->group(function () {
+    Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
+});
+
+Route::middleware(['checkRoleAkses:sma,smk,myob'])->group(function () {
     Route::prefix('/peserta')->group(function () {
         Route::get('', [PesertaController::class, 'index'])->name('peserta');
-        Route::post('/kode-akses', [PesertaController::class, 'kodeAkses'])->name('kode-akses');    
+        Route::post('/kode-akses', [PesertaController::class, 'kodeAkses'])->name('kode-akses');
         Route::get('/start', [PesertaController::class, 'start'])->name('peserta-start-test');
-        
+
         Route::middleware('akseskode')->group(function () {
             Route::get('/test', [PesertaController::class, 'test'])->name('peserta-test-test')->middleware('onlineTest');
             Route::post('/test/add', [PesertaController::class, 'add'])->name('upload-hasil-test')->middleware('onlineTest');
@@ -99,10 +99,12 @@ Route::middleware(['checklogin', 'web'])->group(function () {
         });
     });
 });
+// });
 
 Route::prefix('/auth')->group(function () {
     Route::get('/', [AuthController::class, 'login'])->name('login');
 });
+
 Route::get('/download/rulebook/{lomba}', [DownloadRulebook::class, 'download'])->name('download');
 
 // Route::fallback(function () {

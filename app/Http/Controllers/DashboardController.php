@@ -11,8 +11,10 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $peserta = User::with(['peserta.cabang_lomba'])
-        ->get();
+        // $peserta = User::with(['peserta.cabang_lomba'])->where('role', '!=', 'admin')->get();
+        $peserta = PesertaModel::with(['users', 'cabang_lomba'])->get();
+        
+        // dd($peserta);
 
         // hitung jumlah peserta
         $peserta_sma = PesertaModel::where('cabang_lomba_id', 1)->count();

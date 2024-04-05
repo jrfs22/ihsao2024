@@ -14,10 +14,13 @@ class PesertaLombaSeeder extends Seeder
     public function run(): void
     {
         DB::table('peserta')->insert([
-            'id' => 1,
-            'asal_sekolah' => 'SMKN 1 Amerika',
-            'users_id' => 1,
-            'cabang_lomba_id' => 1,
+            [
+                'id' => 1,
+                'asal_sekolah' => 'SMKN 2 Pekanbaru',
+                'nama_tim' => 'SMKN 2 Pekanbaru (1)',
+                'users_id' => 6,
+                'cabang_lomba_id' => 1,
+            ]
         ]);
-    }
+    }   
 }

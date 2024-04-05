@@ -58,8 +58,7 @@ class PesertaController extends Controller
 
     public function admin()
     {
-        $peserta = User::with(['peserta.cabang_lomba'])
-        ->get();
+        $peserta = PesertaModel::with(['users', 'cabang_lomba'])->get();
 
         return view('after-login.admin.peserta.index')-> with('peserta', $peserta);
     }
@@ -72,6 +71,7 @@ class PesertaController extends Controller
             ]);
 
             $akses = BabakModel::where('kode_soal', $request->kode_akses)->first();
+            // dd($akses);
 
             if ($akses) {
                 Session::put('aksesCode', $akses);
@@ -90,6 +90,7 @@ class PesertaController extends Controller
     public function instruksi() {
         $user_id = auth()->user()->id;
         $data = User::with('peserta.babak.cabangLomba')->where('id', $user_id)->first();
+        // dd($data);
         return view('after-login.peserta.instruksi', compact('data'));
     }
 
@@ -106,7 +107,6 @@ class PesertaController extends Controller
                             'soal_id' => $item,
                             'pilihan_id' => $request->pilihan_ . $i++,
                             'peserta_id' => $userId
-    
                         ]
                     );
                 }

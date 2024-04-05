@@ -31,7 +31,7 @@ class AuthController extends Controller
             Auth::login($user);
             if ($user->role == 'admin') {
                 return redirect()->route('dashboard')->with('login', 'success');
-            } else {
+            } else if($user->role == 'smk' || $user->role == "sma" || $user->role == "myob") {
                 return redirect()->route('peserta')->with('login', 'success');
             }
         }
@@ -42,7 +42,7 @@ class AuthController extends Controller
     {
         auth()->logout();
 
-        return redirect('/');
+        return redirect('/')->with('logout', 'success');
     }
     
 }

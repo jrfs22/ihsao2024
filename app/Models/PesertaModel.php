@@ -20,9 +20,9 @@ class PesertaModel extends Model
         return $this->belongsTo(CabangLombaModel::class, 'cabang_lomba_id', 'id');
     }
 
-    // public function users() : BelongsTo {
-    //     return $this->belongsTo(User::class, 'users_id', 'id');
-    // }
+    public function users() : BelongsTo {
+        return $this->belongsTo(User::class, 'users_id', 'id');
+    }
 
     // public function poin() : HasMany {
     //     return $this->hasMany(PoinModel::class, 'id', 'peserta_id');

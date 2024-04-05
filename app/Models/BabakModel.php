@@ -19,4 +19,9 @@ class BabakModel extends Model
     {
         return $this->hasOne(CabangLombaModel::class, 'id', 'cabang_lomba_id');
     }
+
+    // public function kode_soal() : HasOne
+    // {
+
+    // }
 }

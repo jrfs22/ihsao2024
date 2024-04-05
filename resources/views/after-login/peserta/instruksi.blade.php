@@ -91,7 +91,7 @@
 
                 // Display the countdown
                 document.getElementById("countdown").innerHTML = `
-              ${days} hari, ${hours} jam, ${minutes} detik, ${seconds} detik`;
+              ${days} hari, ${hours} jam, ${minutes} menit, ${seconds} detik`;
             }
         }
     </script>

@@ -18,7 +18,7 @@ class SoalMyobSeeder extends Seeder
             'pertanyaan' => 'Siapa penemu hp?',
             'file_soal' => 'soal.xlxs',
             'cabang_lomba_id' => 3,
-            'babak_id' => 7,
+            'babak_id' => 5,
         ]);
     }
 }

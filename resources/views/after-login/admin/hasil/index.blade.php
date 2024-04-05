@@ -22,6 +22,9 @@
               <th>
                 Poin
               </th>
+              <th>
+                Jumlah Pelanggaran
+              </th>
             </tr>
           </thead>
           <tbody>
@@ -31,6 +34,7 @@
                 <td class="px-4">Email</td>
                 <td class="px-4">Asal Sek</td>
                 <td class="px-4">Poin</td>
+                <td class="px-4">10 x</td>
               </tr>
           </tbody>
         </table>
